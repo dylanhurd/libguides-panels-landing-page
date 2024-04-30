@@ -153,32 +153,35 @@ function loader() {
 };
 
 $( document ).ready(function() {
-  const containerDiv = document.getElementById('custom-content');
-  
-  const style = document.createElement('style');
-  style.setAttribute('type', 'text/css');
+  if(document.getElementById('custom-content') !== null && document.getElementById('custom-content') !== undefined) {
+    const containerDiv = document.getElementById('custom-content');
+    const style = document.createElement('style');
+    style.setAttribute('type', 'text/css');
    
-  for (let key in subjectIDs) {
-    let subjectFrame = document.createElement('div');
-    let html = '<div>';
-    html += '<h3 aria-expanded="false" aria-controls="' + key + '" class="collapser">' + subjectIDs[key].title + ' <i class="fa-' + key + '" aria-hidden="true"></i></h3>';
-    html += '<div id="' + key + '" class="accordian-panel"><div class="subclassToggle" role="tablist">';
-    html += '<button class="bothGuides active" id="all-' + key + '" role="tab" aria-selected="true">All Guides</button><button class="courseGuides" id="cg-' + key + '" role="tab">Course Guides</button><button class="subjectGuides" id="sg-' + key + '" role="tab">Subject Guides</button>';
-    html += '</div>';
-    html += '<ul class="list-group" id="listo-' + key + '"><li class="list-group-item noclassguides">There are no published course guides for this subject</li><li class="list-group-item nosubjectguides">There are no published subject guides for this subject</li></ul>';
-    html += '</div></div>';
-    subjectFrame.innerHTML =  html;
-    containerDiv.appendChild(subjectFrame);
-    containerDiv.appendChild(subjectFrame);
-    style.textContent += '.fa-' + key + ':before { content: "\\' + subjectIDs[key].faunicode + '"; }\r\n';
-}
-document.getElementsByTagName('head')[0].appendChild(style);
+    for (let key in subjectIDs) {
+      let subjectFrame = document.createElement('div');
+      let html = '<div>';
+      html += '<h3 aria-expanded="false" aria-controls="' + key + '" class="collapser">' + subjectIDs[key].title + ' <i class="fa-' + key + '" aria-hidden="true"></i></h3>';
+      html += '<div id="' + key + '" class="accordian-panel"><div class="subclassToggle" role="tablist">';
+      html += '<button class="bothGuides active" id="all-' + key + '" role="tab" aria-selected="true">All Guides</button><button class="courseGuides" id="cg-' + key + '" role="tab">Course Guides</button><button class="subjectGuides" id="sg-' + key + '" role="tab">Subject Guides</button>';
+      html += '</div>';
+      html += '<ul class="list-group" id="listo-' + key + '"><li class="list-group-item noclassguides">There are no published course guides for this subject</li><li class="list-group-item nosubjectguides">There are no published subject guides for this subject</li></ul>';
+      html += '</div></div>';
+      subjectFrame.innerHTML =  html;
+      containerDiv.appendChild(subjectFrame);
+      containerDiv.appendChild(subjectFrame);
+      style.textContent += '.fa-' + key + ':before { content: "\\' + subjectIDs[key].faunicode + '"; }\r\n';
+    }
+    document.getElementsByTagName('head')[0].appendChild(style);
 
-loader();
+    loader();
 
-$('#custom-content').find('.collapser').on('click', function(){
+    $('#custom-content').find('.collapser').on('click', function(){
 		$(this).toggleClass('in');
 		$(this).next('.accordian-panel').toggleClass('in');
 		$(this).attr('aria-expanded', (_, attr) => attr == 'false' ? 'true' : 'false');
-  })
+    })
+  } else {
+    console.log('no #custom-content div');
+  }
 });
