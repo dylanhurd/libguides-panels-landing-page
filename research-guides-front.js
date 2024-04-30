@@ -59,7 +59,7 @@ function checkSubjects(guidesubjects,li_cl_prefix,guidename,url) {
 
 function loader() {
   $.getJSON(
-		"https://libraries.uark.edu/apis/libapp-guides.php",
+		"https://url-of-api-connection.php", // Set the URL of the api-connection.php you uploaded to your webserver
 		function(guides) {
 		$.each(guides, function( i, guide ) {
   		 	if (guide.friendly_url != null && guide.friendly_url != '') {
