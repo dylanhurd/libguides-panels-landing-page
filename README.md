@@ -60,7 +60,7 @@ function loader() {
 
 ## Create LibGuides custom homepage template
 
-To your custom homepage template add a div with id "custom-content" and add a reference to research-guides-front.js
+To your custom homepage template, add a div with id "custom-content" and add a reference to research-guides-front.js
 
 ```
 <div id="custom-content"></div>
