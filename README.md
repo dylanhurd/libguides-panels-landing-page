@@ -10,7 +10,7 @@ Reference **research-guides-front.css** and **research-guides-front.js** from yo
 
 Add your guide information to the top of research-guides-front.js inside the subjectIDs object.
 
-Each property in the object should have the following format:
+Each propery included in the object will appear as a panel. They will appear on the page in the same order they have in the object. Each property in the object should have the following format:
  
  **SubjectSlug**: {title: '**Publicly Displayed Subject Title**', faunicode: '**font awesome icon unicode**', subs: [**'comma','separated','list','of','guide','ids'**]},
  
