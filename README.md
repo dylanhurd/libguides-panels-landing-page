@@ -1,10 +1,8 @@
 # LibGuides Panels Landing Page
 
-
 Upload **research-guides-front.css**, **research-guides-front.js** and **api-connection.php** to a web server.
 
-Reference **research-guides-front.css** and **research-guides-front.js** from your Custom JS/CSS section of Look and Feel in LibGuides admin.
-
+Reference **research-guides-front.css** from your Custom JS/CSS section of Look and Feel in LibGuides admin.
 
 ## Edit research-guides-front.js
 
@@ -57,3 +55,15 @@ function loader() {
     		"grant_type"   => "client_credentials",
 		];
   ```
+
+## Create LibGuides custom homepage template
+
+To your custom homepage template add a div with id "custom-content" and add a reference to research-guides-front.js
+
+```
+<div id="custom-content"></div>
+<script src="https://your.site/path/to/research-guides-front.js"></script>
+
+```
+
+(Note: adding research-guides-front.js to the Custom JS/CSS area of LibGuides can have unintended consequences for LibGuides pages other than the landing page, so it's best to add the reference directly to the custom homepage template.)
