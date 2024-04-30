@@ -15,8 +15,11 @@ Each property in the object should have the following format:
  **SubjectSlug**: {title: '**Publicly Displayed Subject Title**', faunicode: '**font awesome icon unicode**', subs: [**'comma','separated','list','of','guide','ids'**]},
  
  **SubjectSlug** is used only within the script -- just a brief, unique string of a-z characters.
+ 
  **Publicly Displayed Subject Title** is the label for each panel.
+ 
  **Font awesome icon unicode** is the unicode for the font awesome icon representing the subject -- appears below the title in the panel (same as you'd use in CSS, minus the beginning slash).
+ 
  **Comma separated list of guide ids** are the numeric ids for each guide you wish to assign to the subject (guides can be assigned to more than one subject).
  
  Example:
