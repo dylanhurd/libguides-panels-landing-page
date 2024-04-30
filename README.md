@@ -8,7 +8,9 @@ Reference **research-guides-front.css** from your Custom JS/CSS section of Look 
 
 Add your guide information to the top of research-guides-front.js inside the subjectIDs object.
 
-Each property included in the object will appear as a panel. Panels will appear on the screen in the same order they have in the object. Each property in the object should have the following format:
+Each property included in the object will appear as a panel. Panels will appear on the screen in the same order they have in the object.
+
+Each property in the object should have the following format:
  
  **SubjectSlug**: {title: '**Publicly Displayed Subject Title**', faunicode: '**font awesome icon unicode**', subs: [**'comma','separated','list','of','guide','ids'**]},
  
