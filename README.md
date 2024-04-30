@@ -34,6 +34,15 @@ Each property in the object should have the following format:
  };
  ```
 
+Give the loader() function the URL of the api-connection.php script
+
+ ```
+function loader() {
+  $.getJSON(
+		"https://url-of-api-connection.php", // Set the URL of the api-connection.php you uploaded to your webserver
+ ```
+  
+
  ## Edit api-connection.php
  
  In the Tools > API section of LibGuides, under API Authentication, create an application to get a client id and client secret.
