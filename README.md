@@ -40,8 +40,8 @@ Each property in the object should have the following format:
   ```
  function authenticate(){
 		$post = [
-    		**"client_id" => "", // Your LibApps API Client ID**
-    		**"client_secret" => "", // Your LibApps API Client Secret**
+    		"client_id" => "", // Your LibApps API Client ID <<
+    		"client_secret" => "", // Your LibApps API Client Secret <<
     		"grant_type"   => "client_credentials",
 		];
   ```
