@@ -39,7 +39,7 @@ Give the loader() function the URL of the api-connection.php script
  ```
 function loader() {
   $.getJSON(
-		"https://url-of-api-connection.php", // Set the URL of the api-connection.php you uploaded to your webserver
+		"https://url-of-api-connection.php", // Set the URL of the api-connection.php script you uploaded to your webserver
  ```
   
 
