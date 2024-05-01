@@ -1,7 +1,5 @@
 # LibGuides Panels Landing Page
 
-Upload **research-guides-front.css**, **research-guides-front.js** and **api-connection.php** to a web server.
-
 Reference **research-guides-front.css** from your Custom JS/CSS section of Look and Feel in LibGuides admin.
 
 ## Edit research-guides-front.js
