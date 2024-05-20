@@ -27,19 +27,24 @@ const subjectIDs = {
  */
 
 
-
 function matchSuperSubject(id) {
+    let supersubjectsMatched = [];
 	for (let key in subjectIDs) {
   		if ( subjectIDs[key].subs.includes(String(id)) ) {
-			return key;
+  		    supersubjectsMatched.push(key);			
 		}
 	}
+	return supersubjectsMatched;
 }
 
 function checkSubjects(guidesubjects,li_cl_prefix,guidename,url) {
-	let supersubjects = [];
+	let supersubjects = [];	
 	if(guidesubjects !== undefined){
-	  guidesubjects.forEach((subject) => supersubjects.push( matchSuperSubject( subject.id ) ) );
+	  guidesubjects.forEach((subject) => {
+	    let supersubjectsArray = matchSuperSubject( subject.id );
+	    supersubjectsArray.forEach((supersubject) => { supersubjects.push( supersubject ) });
+	  });
+
 	  var dedupe = (supersubjects) => supersubjects.filter((v,i) => supersubjects.indexOf(v) === i);
 	  dedupe(supersubjects).forEach((subjectName) => {
 	    if(subjectName !== undefined){
