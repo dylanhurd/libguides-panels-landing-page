@@ -17,12 +17,12 @@ const subjectIDs = {
  Example:
  
  const subjectIDs = {
- AgFood: {title: 'Agriculture & Food', faunicode: 'f06c', subs: ['96029','19781','19780','19782','19783','19784','19785','19813','19819','19826','19827','19828','19857','19859','19867','193310','193543', '19806']},
+  "AgFood": {"title": "Agriculture & Food", "faunicode": "f06c", "subs": ["96029","19781","19780","19782","19783","19784","19785","19813","19819","19826","19827","19828","19857","19859","19867","193310","193543", "19806"]},
  
- ArtArch: {title: 'Art & Architecture', faunicode: 'f1ad', subs: ['96030','19788','19789','19832','19837','198480']},
+  "ArtArch": {"title": "Art & Architecture", "faunicode": "f1ad", "subs": ["96030","19788","19789","19832","19837","198480"]},
  
- OpenEd: {title: 'Open Education', faunicode: 'f5d1', subs: ['189610']}
- };
+  "OpenEd": {"title": "Open Education", "faunicode": "f5d1", "subs": ["189610"]}
+};
  
  */
 
